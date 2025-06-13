@@ -1,0 +1,23 @@
+    {
+      "compilerOptions": {
+        "composite": true,
+        "target": "ESNext", // This is crucial for enabling modern features like import.meta
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true, // noEmit: true is typically correct for the main tsconfig in Vite projects
+        "jsx": "react-jsx",
+        "types": ["react", "react-dom"]
+      },
+      "include": ["src", "vite-env.d.ts", "**/*.ts", "**/*.tsx"],
+      "references": [{ "path": "./tsconfig.node.json" }]
+    }
